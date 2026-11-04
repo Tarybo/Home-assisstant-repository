@@ -6,3 +6,10 @@ http:
   use_x_forwarded_for: true
   trusted_proxies:
     - ::1
+input_button:
+  my_love_tap:
+    name: "My Love Tap"
+    icon: mdi:heart
+  partner_love_tap:
+    name: "Partner Love Tap"
+    icon: mdi:heart
