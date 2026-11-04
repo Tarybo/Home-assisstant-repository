@@ -1,0 +1,8 @@
+# Configure a default setup
+default_config:
+
+# Fix the Render proxy error
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - ::1
