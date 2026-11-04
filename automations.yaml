@@ -15,7 +15,7 @@
             - condition: trigger
               id: mine_pressed
           sequence:
-            - action: notify.mobile_app_PARTNERS_PHONE_NAME
+            - action: notify.mobile_app_pixel_4
               data:
                 message: "Thinking of you!"
                 data:
@@ -25,7 +25,7 @@
             - condition: trigger
               id: partners_pressed
           sequence:
-            - action: notify.mobile_app_YOUR_PHONE_NAME
+            - action: notify.mobile_app_pixel_11_pro_xl
               data:
                 message: "Thinking of you!"
                 data:
