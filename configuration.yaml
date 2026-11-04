@@ -1,3 +1,5 @@
+automation: !include automations.yaml
+
 # Configure a default setup
 default_config:
 
