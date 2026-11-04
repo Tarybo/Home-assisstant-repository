@@ -1,0 +1,34 @@
+- alias: Long Distance Watch Vibrate Free
+  description: "Triggers watch vibrations when virtual buttons are pressed"
+  id: long_distance_watch_vibrate_free
+  trigger:
+    - trigger: state
+      entity_id: input_button.my_love_tap
+      id: mine_pressed
+    - trigger: state
+      entity_id: input_button.partner_love_tap
+      id: partners_pressed
+  condition: []
+  action:
+    - choose:
+        - conditions:
+            - condition: trigger
+              id: mine_pressed
+          sequence:
+            - action: notify.mobile_app_PARTNERS_PHONE_NAME
+              data:
+                message: "Thinking of you!"
+                data:
+                  channel: "LoveTaps"
+                  vibrationPattern: "100, 200, 100, 200, 500"
+        - conditions:
+            - condition: trigger
+              id: partners_pressed
+          sequence:
+            - action: notify.mobile_app_YOUR_PHONE_NAME
+              data:
+                message: "Thinking of you!"
+                data:
+                  channel: "LoveTaps"
+                  vibrationPattern: "100, 200, 100, 200, 500"
+  mode: restart
